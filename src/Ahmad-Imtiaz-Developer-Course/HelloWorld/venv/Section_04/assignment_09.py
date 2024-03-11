@@ -43,10 +43,9 @@ for line in fr:
     # split input by pipe
     # access email address as first val
     columns = line.split("|")
-<<<<<<< HEAD
+
     # print(columns)
-=======
->>>>>>> ebee6a3ba295552ac0f574b6440213fc3f0536c8
+
     lookup_val = columns[0]
     # if lookup_val not in d.keys()
     if(d.get(lookup_val) is None): # if lookup_val not in dict
@@ -56,18 +55,17 @@ for line in fr:
 
         next_number = max([int(n) for n  in d.values()]) + 1
         d[lookup_val] = str(next_number)
-<<<<<<< HEAD
+
 
         # set columns at first index in line_list to next_num
         # append cols joined by pipe
-=======
->>>>>>> ebee6a3ba295552ac0f574b6440213fc3f0536c8
+
         columns[0] = str(next_number)
         line_list.append("|".join(columns))
 
         # email found existing in dict
     else:
-<<<<<<< HEAD
+
         # set cols at zero to lookup_val
         # append cols joined by pipe to line_list
         columns[0] = d.get(lookup_val)
@@ -75,27 +73,19 @@ for line in fr:
 
     fr = line_list
 
-=======
-        columns[0] = d.get(lookup_val)
-        line_list.append("|".join(columns))
-
->>>>>>> ebee6a3ba295552ac0f574b6440213fc3f0536c8
 # don't change the lines below:
 # --------------------------------------
 print("Value of fr: ")
 print(fr)
 print("Value of d:")
 print(d)
-<<<<<<< HEAD
 # print('line_list: ', line_list)
 # values = ['200', '21', '190']
-=======
 print('line_list: ', line_list)
 
 
 
 # values= ['200', '21', '190']
->>>>>>> ebee6a3ba295552ac0f574b6440213fc3f0536c8
 # print(max([int(n) for n in values]))
 
 
